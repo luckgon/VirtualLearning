@@ -1,6 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { useFonts, Nunito_700Bold, Nunito_600SemiBold } from '@expo-google-fonts/nunito';
+import { useNavigation } from '@react-navigation/native';
+import LoginScreen from './LoginScreen'
+
+
 
 
 export default function WelcomeScreen() {
@@ -14,6 +18,12 @@ export default function WelcomeScreen() {
         return null;
     }
 
+    const navigation = useNavigation()
+
+    function telaLogin() {
+        navigation.navigate(LoginScreen);
+    }
+
     return (
         <View style={styles.container}>
             <View>
@@ -24,8 +34,9 @@ export default function WelcomeScreen() {
                 <Image source={require('../assets/LogoGoogle.png')} />
                 <Text style={styles.txTouchOp}>Entrar com o Google</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={'telaLogin'}>
                 <Text style={styles.txTouchOp}>Entrar com E-mail</Text>
+               
             </TouchableOpacity>
             <StatusBar style="auto" />
         </View>
@@ -56,10 +67,14 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         borderColor: "#000000",
         borderWidth: 2,
-
+        
     },
     txTouchOp: {
-        fontFamily: 'Nunito_600SemiBold'
+        paddingTop: 100,
+        fontFamily: 'Nunito_600SemiBold',
+        height: 200,
+        alignItems: 'center',
+
     }
 
 });
