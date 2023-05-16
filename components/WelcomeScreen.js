@@ -19,14 +19,22 @@ export default function WelcomeScreen() {
             <View>
                 <Image source={require('../assets/RoboMeditando.png')} style={styles.img} />
             </View>
-            <Text style={styles.txt}>Seja bem vindo!</Text>
-            <TouchableOpacity style={styles.TouchOpac}>
-                <Image source={require('../assets/LogoGoogle.png')} />
-                <Text style={styles.txTouchOp}>Entrar com o Google</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text style={styles.txTouchOp}>Entrar com E-mail</Text>
-            </TouchableOpacity>
+            <View style={styles.textos}>
+                <Text style={styles.titulo}>Seja bem vindo!</Text>
+                <View style={styles.containerGoogle}>
+                    <TouchableOpacity style={styles.TOGoogle}>
+                        <Image source={require('../assets/LogoGoogle.png')} style={styles.imgGoogle}/>
+                        <Text style={styles.txTOGoogle}>Entrar com o Google</Text>
+                    </TouchableOpacity>
+                </View>
+                <Text style={styles.ou}>ou</Text>
+                <View>
+                    <TouchableOpacity style={styles.TOEmail}>
+                        <Text style={styles.txTOEmail}>Entrar com E-mail</Text>
+                    </TouchableOpacity>
+                </View>
+            </View>
+
             <StatusBar style="auto" />
         </View>
     );
@@ -34,32 +42,54 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 5,
-        paddingBottom: 10,
+        borderWidth: 5,
         flex: 1,
+        flexDirection: "column",
         backgroundColor: '#ffffff',
         alignItems: "center",
         justifyContent: 'space-around'
     },
     img: {
-        paddingTop: 0,
         width: 300,
     },
-    txt: {
+    textos: {
+        borderWidth: 5,
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "space-around",
+        width: 400,
+    },
+    titulo: {
         fontFamily: 'Nunito_700Bold',
         fontSize: 30,
     },
-    TouchOpac:{
+    containerGoogle: {
+        height: 50,
+    },
+    imgGoogle: {
+        
+    },
+    TOGoogle: {
         flex: 1,
-        flexDirection: "row",
+        flexDirection: 'row',
+        borderWidth: 5,
+        width: 300,
+        height: 100,
+        backgroundColor: '#0283AC',
         alignItems: "center",
-        justifyContent: "space-between",
-        borderColor: "#000000",
-        borderWidth: 2,
+        padding: 10,
+    },
+    txTOGoogle: {
+        fontFamily: 'Nunito_600SemiBold',
+        color: '#000000',
+    },
+    TOEmail: {
 
     },
-    txTouchOp: {
-        fontFamily: 'Nunito_600SemiBold'
-    }
+    txTOEmail: {
+        fontFamily: 'Nunito_600SemiBold',
+        color: '#000000',
+    },
+
 
 });
