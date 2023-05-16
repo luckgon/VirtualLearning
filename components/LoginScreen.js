@@ -38,7 +38,7 @@ export default function LoginScreen() {
                       }}
                 />
                 <TouchableOpacity>
-                    <Text>Esqueci minha senha</Text>
+                    <Text style={styles.opText}>Esqueci minha senha</Text>
                 </TouchableOpacity>
 
             </View>
@@ -48,7 +48,7 @@ export default function LoginScreen() {
                     <Text style={styles.txEntar}>Entrar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btCadastrar} >
-                    <Text>Cadastrar</Text>
+                    <Text style={styles.txCadastrar}>Cadastrar</Text>
                 </TouchableOpacity>
             </View>    
             
@@ -83,33 +83,41 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         alignSelf: 'center',
         borderRadius: 5,
-        borderWidth: 0.5,
+        borderWidth: 1,
         borderColor: '#9e9e9e',
         borderWidth: 2,
 
       },
       btEntar: {
         backgroundColor:'#3b82ab',
-        padding: 75,
+        padding: 65,
         paddingTop: 15,
         paddingBottom: 15,
         borderRadius: 5,
-        marginRight: 10,
+        marginRight: 20,
         
 
       },
       txEntar: {
         color: 'white',
+        fontSize: 20,
       },
       btCadastrar: {
-        borderWidth: 2,
-        padding: 50,
+        borderColor: '#9e9e9e',
+        borderWidth: 1,
+        padding: 40,
         paddingTop: 15,
         paddingBottom: 15,
         borderRadius: 5,
         
 
       },
+
+      txCadastrar: {
+        color: 'black',
+        fontSize: 20,
+      },
+
       botoes:{
         
         rowGap: 100,
@@ -124,6 +132,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
         flexDirection: 'row',
+      },
+
+      opText:{
+        fontSize:13,
       },
 
       mail: {
