@@ -10,9 +10,25 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='SplashScreen'>
-        <Stack.Screen name='Welcome' component={WelcomeScreen}/>
-        <Stack.Screen name='Access' component={LoginScreen}/>
+        <Stack.Screen name='Welcome' component={WellcomeScreen}/>
+        <Stack.Screen name='Acess' component={LoginnScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
+}
+
+function WellcomeScreen({navigation}){
+  return (
+
+    <WelcomeScreen/>
+);
+
+}
+
+function LoginnScreen(){
+  return(
+
+    <LoginScreen/>
+  )
+
 }

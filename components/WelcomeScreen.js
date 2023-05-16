@@ -1,6 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { useFonts, Nunito_700Bold, Nunito_600SemiBold } from '@expo-google-fonts/nunito';
+import { useNavigation } from '@react-navigation/native';
+
+
+
 
 
 export default function WelcomeScreen() {
@@ -14,11 +18,14 @@ export default function WelcomeScreen() {
         return null;
     }
 
+    const navigation = useNavigation()
+
     return (
         <View style={styles.container}>
             <View>
                 <Image source={require('../assets/RoboMeditando.png')} style={styles.img} />
             </View>
+<<<<<<< HEAD
             <View style={styles.textos}>
                 <Text style={styles.titulo}>Seja bem vindo!</Text>
                 <View style={styles.containerGoogle}>
@@ -35,6 +42,17 @@ export default function WelcomeScreen() {
                 </View>
             </View>
 
+=======
+            <Text style={styles.txt}>Seja bem vindo!</Text>
+            <TouchableOpacity style={styles.TouchOpac}>
+                <Image source={require('../assets/LogoGoogle.png')} />
+                <Text style={styles.txTouchOp}>Entrar com o Google</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate("Acess")}>
+                <Text style={styles.txTouchOp}>Entrar com E-mail</Text>
+               
+            </TouchableOpacity>
+>>>>>>> 5285dd704771489d37feba5ccb16ae339a27da13
             <StatusBar style="auto" />
         </View>
     );
@@ -77,6 +95,7 @@ const styles = StyleSheet.create({
         height: 100,
         backgroundColor: '#0283AC',
         alignItems: "center",
+<<<<<<< HEAD
         padding: 10,
     },
     txTOGoogle: {
@@ -91,5 +110,19 @@ const styles = StyleSheet.create({
         color: '#000000',
     },
 
+=======
+        justifyContent: "space-between",
+        borderColor: "#000000",
+        borderWidth: 2,
+        
+    },
+    txTouchOp: {
+        paddingTop: 100,
+        fontFamily: 'Nunito_600SemiBold',
+        height: 200,
+        alignItems: 'center',
+
+    }
+>>>>>>> 5285dd704771489d37feba5ccb16ae339a27da13
 
 });
