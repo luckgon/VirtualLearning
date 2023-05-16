@@ -7,7 +7,7 @@ import BouncyCheckbox from "react-native-bouncy-checkbox";
 export default function LoginScreen() {
     return(
         <View style={styles.container}>
-            <Text>Acesse</Text>
+            <Text style={styles.tx1}>Acesse</Text>
             <Text>Com e-mail para entrar</Text>
 
             <View >
@@ -72,6 +72,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         alignItems: "center",
         justifyContent: 'space-around'
+    },
+    tx1:{
+        fontSize:50,
+    
     },
     textInput: {
         backgroundColor: '#eaeced',
