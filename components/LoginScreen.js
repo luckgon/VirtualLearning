@@ -1,6 +1,7 @@
 
-import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput } from "react-native";
-import { Button } from "react-native-web";
+import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, CheckBox } from "react-native";
+import BouncyCheckbox from "react-native-bouncy-checkbox";
+
 
 
 export default function LoginScreen() {
@@ -8,8 +9,39 @@ export default function LoginScreen() {
         <View style={styles.container}>
             <Text>Acesse</Text>
             <Text>Com e-mail para entrar</Text>
-            <TextInput style={styles.textInput}/>
-            <TextInput style={styles.textInput} secureTextEntry={true}/>
+
+            <View >
+                <Text style={styles.mail}>E-mail</Text>
+                <TextInput style={styles.textInput}/>
+            </View>
+            <View >
+                <Text style={styles.pw}>Senha</Text>
+                <TextInput style={styles.textInput} secureTextEntry={true}/>
+
+            </View>
+
+            <View style={styles.opcoes}>
+
+                
+                <BouncyCheckbox
+                    
+                    marginRight={50}
+                    fillColor="#3b82ab"
+                    size={25}
+                    color="blue"
+                    text="Lembrar minha senha"
+                    textStyle={{
+                        textDecorationLine: "none",
+                        fontSize: 13,
+                        color: 'black',
+                        
+                      }}
+                />
+                <TouchableOpacity>
+                    <Text>Esqueci minha senha</Text>
+                </TouchableOpacity>
+
+            </View>
 
             <View style={styles.botoes}>
                 <TouchableOpacity style={styles.btEntar}>
@@ -19,14 +51,13 @@ export default function LoginScreen() {
                     <Text>Cadastrar</Text>
                 </TouchableOpacity>
             </View>    
+            
+            
+
+
+            
             <TouchableOpacity>
-                <Text>Esqueci minha senha</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Entrar</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Entrar</Text>
+                <Text>ou continue com</Text>
             </TouchableOpacity>
 
         </View>
@@ -45,24 +76,25 @@ const styles = StyleSheet.create({
     textInput: {
         backgroundColor: '#eaeced',
         color: 'black',
-        height: 40,
-        width: 300,
+        height: 60,
+        width: 370,
         marginTop: 20,
         marginHorizontal: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: 20,
         alignSelf: 'center',
         borderRadius: 5,
-        borderWidth: 1,
+        borderWidth: 0.5,
         borderColor: '#9e9e9e',
         borderWidth: 2,
 
       },
       btEntar: {
-        backgroundColor:'#33caff',
-        padding: 45,
+        backgroundColor:'#3b82ab',
+        padding: 75,
         paddingTop: 15,
         paddingBottom: 15,
         borderRadius: 5,
+        marginRight: 10,
         
 
       },
@@ -71,7 +103,7 @@ const styles = StyleSheet.create({
       },
       btCadastrar: {
         borderWidth: 2,
-        padding: 30,
+        padding: 50,
         paddingTop: 15,
         paddingBottom: 15,
         borderRadius: 5,
@@ -79,8 +111,37 @@ const styles = StyleSheet.create({
 
       },
       botoes:{
-        justifyContent:'space-between',
         
+        rowGap: 100,
+        flexDirection: 'row',
 
       },
+      checkbox: {
+        alignSelf: 'center',
+      },
+
+      opcoes: {
+        alignItems: 'center',
+
+        flexDirection: 'row',
+      },
+
+      mail: {
+        marginLeft: 30,
+      },
+      pw: {
+        marginLeft: 30,
+      },
+      box: {
+        size:25,
+        fillColor:"red",
+        unfillColor:"#FFFFFF",
+        text:"Custom Checkbox",
+        borderColor: "red",
+        borderWidth: 2,
+        fontFamily: "JosefinSans-Regular",
+        
+      },
+
+
 })    

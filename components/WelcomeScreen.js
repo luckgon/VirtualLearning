@@ -25,24 +25,6 @@ export default function WelcomeScreen() {
             <View>
                 <Image source={require('../assets/RoboMeditando.png')} style={styles.img} />
             </View>
-<<<<<<< HEAD
-            <View style={styles.textos}>
-                <Text style={styles.titulo}>Seja bem vindo!</Text>
-                <View style={styles.containerGoogle}>
-                    <TouchableOpacity style={styles.TOGoogle}>
-                        <Image source={require('../assets/LogoGoogle.png')} style={styles.imgGoogle}/>
-                        <Text style={styles.txTOGoogle}>Entrar com o Google</Text>
-                    </TouchableOpacity>
-                </View>
-                <Text style={styles.ou}>ou</Text>
-                <View>
-                    <TouchableOpacity style={styles.TOEmail}>
-                        <Text style={styles.txTOEmail}>Entrar com E-mail</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-
-=======
             <Text style={styles.txt}>Seja bem vindo!</Text>
             <TouchableOpacity style={styles.TouchOpac}>
                 <Image source={require('../assets/LogoGoogle.png')} />
@@ -52,7 +34,6 @@ export default function WelcomeScreen() {
                 <Text style={styles.txTouchOp}>Entrar com E-mail</Text>
                
             </TouchableOpacity>
->>>>>>> 5285dd704771489d37feba5ccb16ae339a27da13
             <StatusBar style="auto" />
         </View>
     );
@@ -95,7 +76,6 @@ const styles = StyleSheet.create({
         height: 100,
         backgroundColor: '#0283AC',
         alignItems: "center",
-<<<<<<< HEAD
         padding: 10,
     },
     txTOGoogle: {
@@ -110,12 +90,12 @@ const styles = StyleSheet.create({
         color: '#000000',
     },
 
-=======
-        justifyContent: "space-between",
-        borderColor: "#000000",
-        borderWidth: 2,
+// =======
+//         justifyContent: "space-between",
+//         borderColor: "#000000",
+//         borderWidth: 2,
         
-    },
+//     },
     txTouchOp: {
         paddingTop: 100,
         fontFamily: 'Nunito_600SemiBold',
@@ -123,6 +103,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     }
->>>>>>> 5285dd704771489d37feba5ccb16ae339a27da13
-
-});
+})
