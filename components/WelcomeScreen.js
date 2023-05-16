@@ -41,30 +41,61 @@ export default function WelcomeScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 5,
-        paddingBottom: 10,
+        borderWidth: 5,
         flex: 1,
+        flexDirection: "column",
         backgroundColor: '#ffffff',
         alignItems: "center",
         justifyContent: 'space-around'
     },
     img: {
-        paddingTop: 0,
         width: 300,
     },
-    txt: {
+    textos: {
+        borderWidth: 5,
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "space-around",
+        width: 400,
+    },
+    titulo: {
         fontFamily: 'Nunito_700Bold',
         fontSize: 30,
     },
-    TouchOpac:{
-        flex: 1,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        borderColor: "#000000",
-        borderWidth: 2,
+    containerGoogle: {
+        height: 50,
+    },
+    imgGoogle: {
         
     },
+    TOGoogle: {
+        flex: 1,
+        flexDirection: 'row',
+        borderWidth: 5,
+        width: 300,
+        height: 100,
+        backgroundColor: '#0283AC',
+        alignItems: "center",
+        padding: 10,
+    },
+    txTOGoogle: {
+        fontFamily: 'Nunito_600SemiBold',
+        color: '#000000',
+    },
+    TOEmail: {
+
+    },
+    txTOEmail: {
+        fontFamily: 'Nunito_600SemiBold',
+        color: '#000000',
+    },
+
+// =======
+//         justifyContent: "space-between",
+//         borderColor: "#000000",
+//         borderWidth: 2,
+        
+//     },
     txTouchOp: {
         paddingTop: 100,
         fontFamily: 'Nunito_600SemiBold',
@@ -72,5 +103,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
 
     }
-
-});
+})
